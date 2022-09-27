@@ -2,7 +2,6 @@ html,
 body {
   max-width: 960px;
   height: 100%;
-  min-height: 100vh;
   margin: auto;
   font-size: 16px;
   line-height: 1.6;
@@ -36,7 +35,12 @@ footer {
 }
 
 main {
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 article {
@@ -73,6 +77,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
 }
 
 .tag-items {
@@ -91,4 +96,44 @@ h2 {
 .summary,
 .link-to-article {
   margin-top: 24px;
+}
+
+.profile {
+  display: flex;
+  flex: 4fr;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sns {
+  display: flex;
+  flex: 1fr;
+  justify-content: space-between;
+}
+
+.sns-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.profile li {
+  display: inline;
+}
+
+.profile li:not(:last-child)::after {
+  content: ' / ';
+}
+
+.profile-img {
+  max-width: 8em;
+  max-height: 8em;
+}
+
+.introduction {
+  margin-block-start: 16px;
+  text-align: center;
+}
+
+.full-name {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
