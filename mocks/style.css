@@ -82,6 +82,8 @@ h2 {
 
 .tag-items {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 
 .tag-items li {
@@ -136,4 +138,40 @@ h2 {
 .full-name {
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.search {
+  flex: 9fr;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  border: 0;
+}
+
+.search-icon {
+  flex: 1fr;
+  padding: 0;
+  background-color: white;
+  border: none;
+}
+
+.tags {
+  max-width: 80%;
+  margin-top: 58px;
+}
+
+.close-btn {
+  margin-top: 30px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #505f6e;
 }
