@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site Title</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <a href="./home.html">Site Title</a>
+        <a class="logo" href="./home.html">Ymmr</a>
         <nav>
           <ul class="nav-items">
             <li>
-              <a href="./about.html">About</a>
+              <a class="nav-item" href="./search.html">
+                <img alt="search" src="./images/search.svg" />
+                Search
+              </a>
             </li>
             <li>
-              <a href="./search.html">Search</a>
+              <!-- <a href="./about.html">About</a> -->
+              <a class="nav-item" href="./about.html">
+                <img alt="about" src="./images/user.svg" />
+                About
+              </a>
             </li>
             <li>
-              <a href="#">GitHub</a>
+              <a
+                class="nav-item"
+                href="https://github.com/yu-yamamura/prototype-blog"
+              >
+                <img alt="github-repo" src="./images/github.svg" />
+                GitHub
+              </a>
             </li>
           </ul>
         </nav>
