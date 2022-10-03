@@ -4,6 +4,8 @@
   --accent-color-relaxed: rgb(76 86 106);
   --accent-color-vivid: rgb(115 151 186);
   --border-color: rgb(216 222 233);
+  --color-disabled: rgb(140 149 159);
+  --color-bg-hover: rgb(0 0 0 / 3%);
 }
 
 html,
@@ -50,7 +52,7 @@ main {
   align-items: flex-start;
   justify-content: center;
   max-width: 48rem;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 article {
@@ -156,10 +158,51 @@ code::after code::before {
   color: var(--accent-color-vivid);
 }
 
+.pagenation-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2.25rem;
+
+  /* color: var(--accent-color-relaxed); */
+}
+
+.pagenation-item-disabled a {
+  color: var(--color-disabled) !important;
+  cursor: default;
+  background-color: var(--base-color) !important;
+}
+
+.pagenation-item-active a {
+  /* color: var(--color-disabled); */
+  color: var(--accent-color-relaxed);
+  cursor: default;
+  background-color: var(--base-color) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
 .tag-items a:hover,
 .page-link:hover {
   color: var(--accent-color-relaxed);
   text-decoration: underline var(--accent-color-relaxed) solid;
+}
+
+.pagenation-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagenation-item a:hover {
+  color: var(--accent-color-relaxed);
+  background-color: var(--color-bg-hover);
+}
+
+.pagenation {
+  display: flex;
+  gap: 1px;
 }
 
 .wrapper {
@@ -254,6 +297,4 @@ code::after code::before {
 .last-edited-date {
   display: flex;
   justify-content: space-between;
-}
-}
 }
