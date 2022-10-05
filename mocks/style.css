@@ -50,7 +50,7 @@ main {
   flex-direction: column;
   align-content: center;
   align-items: flex-start;
-  justify-content: center;
+  min-width: 48rem;
   max-width: 48rem;
   margin: 0 auto 40px;
 }
@@ -109,6 +109,7 @@ code::after code::before {
   text-decoration: underline var(--accent-color-vivid) solid;
 }
 
+.page-title,
 .site-name {
   font-size: 2rem;
   font-weight: bold;
@@ -143,7 +144,7 @@ code::after code::before {
 }
 
 .page-heading {
-  margin-block-end: 3em;
+  margin: 3em 0;
 }
 
 .tag-items {
@@ -213,42 +214,40 @@ code::after code::before {
 
 .profile {
   display: flex;
-  flex: 4fr;
   flex-direction: column;
   align-items: center;
-}
-
-.sns {
-  display: flex;
-  flex: 1fr;
-  justify-content: space-between;
-}
-
-.sns-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.profile li {
-  display: inline;
-}
-
-.profile li:not(:last-child)::after {
-  content: ' / ';
+  align-self: center;
+  margin-block-end: 1.5rem;
 }
 
 .profile-img {
-  max-width: 8em;
-  max-height: 8em;
+  max-width: 8rem;
+  margin-block-end: 1rem;
 }
 
-.introduction {
-  margin-block-start: 16px;
-  text-align: center;
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-end: 1rem;
 }
 
 .full-name {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--accent-color-relaxed);
+}
+
+.likes {
+  display: flex;
+}
+
+.likes :not(:last-child)::after {
+  content: '/';
+}
+
+.contacts {
+  display: flex;
+  gap: 1rem;
 }
 
 .form {
