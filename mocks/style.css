@@ -6,6 +6,7 @@
   --border-color: rgb(216 222 233);
   --color-disabled: rgb(140 149 159);
   --color-bg-hover: rgb(0 0 0 / 3%);
+  --color-form: rgb(117 117 117);
 }
 
 html,
@@ -50,8 +51,8 @@ main {
   flex-direction: column;
   align-content: center;
   align-items: flex-start;
-  min-width: 48rem;
-  max-width: 48rem;
+  min-width: 60em;
+  max-width: 60em;
   margin: 0 auto 40px;
 }
 
@@ -75,6 +76,10 @@ h5,
 h6 {
   font-size: 1rem;
   font-weight: bold;
+}
+
+input {
+  color: var(--main-bg-color);
 }
 
 code::after code::before {
@@ -126,9 +131,16 @@ code::after code::before {
 }
 
 .article {
-  padding-block-start: 3em;
-  padding-block-end: 3em;
+  padding-block: 3rem;
   border-block-start: solid var(--border-color);
+}
+
+.search-result {
+  padding-block-end: 3rem;
+}
+
+.result {
+  font-size: 1.5rem;
 }
 
 .article-title {
@@ -144,7 +156,11 @@ code::after code::before {
 
 .article-body {
   display: grid;
-  gap: 24px;
+  gap: 1.5rem;
+}
+
+.search-result .article-body {
+  gap: 0.5rem;
 }
 
 .page-heading {
@@ -211,6 +227,12 @@ code::after code::before {
   min-height: 100vh;
 }
 
+.profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -255,6 +277,7 @@ code::after code::before {
   gap: 3rem;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
   margin-block-start: 3rem;
 }
 
